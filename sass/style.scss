@@ -1,0 +1,43 @@
+/*Variables*/
+$color-one: #34495e;
+$color-two: #f1f2f6;
+$color-three: #c23616;
+$color-four: #e84118;
+
+body {
+  background-color: $color-one;
+  color: $color-two;
+  font-family: "Stylish", sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-title {
+  font-family: "Baloo Bhai", cursive;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.btn {
+  background-color: $color-three;
+  padding: 30px 60px;
+  margin: 20px;
+  font-size: 30px;
+  color: $color-two;
+  cursor: pointer;
+  border: 3px solid $color-two;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: $color-four;
+}
+
+.answer {
+  margin: 20px 0;
+}
