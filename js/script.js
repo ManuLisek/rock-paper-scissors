@@ -1,4 +1,11 @@
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+var buttonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
+
+function buttonClicked(buttonName) {
+  clearMessages();
+  console.log(buttonName + ' został kliknięty');
+
+  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+
 
   function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -29,13 +36,20 @@ var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, player
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   }
+    playerMove = buttonName;
+    console.log('wybór ruchu gracza to: ' + playerInput);
+    playerMove = buttonName;
+    console.log('ruch gracza to: ' + playerMove);
+    randomNumber = Math.floor(Math.random() * 3 + 1);
+    console.log('wylosowana liczba to: ' + randomNumber);
+    computerMove = getMoveName(randomNumber);
+    console.log('ruch komputera to: ' + computerMove);
+    displayResult(playerMove, computerMove);
+  }
 
-  playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-  console.log('wybór ruchu gracza to: ' + playerInput);
-  playerMove = getMoveName(playerInput);
-  console.log('ruch gracza to: ' + playerMove);
-  randomNumber = Math.floor(Math.random() * 3 + 1);
-  console.log('wylosowana liczba to: ' + randomNumber);
-  computerMove = getMoveName(randomNumber);
-  console.log('ruch komputera to: ' + computerMove);
-  displayResult(playerMove, computerMove);
+  buttonRock = document.getElementById('button-rock');
+  buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+  buttonPaper = document.getElementById('button-paper');
+  buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+  buttonScissors = document.getElementById('button-scissors');
+  buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
