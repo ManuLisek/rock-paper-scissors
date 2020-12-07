@@ -1,10 +1,17 @@
 var buttonName;
+const buttonRock = document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+const buttonPaper = document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+const buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+
 
 function buttonClicked(buttonName) {
   clearMessages();
   console.log(buttonName + ' został kliknięty');
 
-  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove;
+  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerMove;
 
 
   function getMoveName(argMoveId) {
@@ -36,8 +43,7 @@ function buttonClicked(buttonName) {
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   }
-    playerMove = buttonName;
-    console.log('wybór ruchu gracza to: ' + playerInput);
+    
     playerMove = buttonName;
     console.log('ruch gracza to: ' + playerMove);
     const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -47,9 +53,4 @@ function buttonClicked(buttonName) {
     displayResult(playerMove, computerMove);
   }
 
-  const buttonRock = document.getElementById('button-rock');
-  buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-  const buttonPaper = document.getElementById('button-paper');
-  buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-  const buttonScissors = document.getElementById('button-scissors');
-  buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+  
