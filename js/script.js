@@ -1,4 +1,3 @@
-var buttonName;
 const buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 const buttonPaper = document.getElementById('button-paper');
@@ -10,8 +9,6 @@ buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); }
 function buttonClicked(buttonName) {
   clearMessages();
   console.log(buttonName + ' został kliknięty');
-
-  var argComputerMove, argMoveId, argPlayerMove;
 
 
   function getMoveName(argMoveId) {
