@@ -11,7 +11,7 @@ function buttonClicked(buttonName) {
   clearMessages();
   console.log(buttonName + ' został kliknięty');
 
-  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerMove;
+  var argComputerMove, argMoveId, argPlayerMove;
 
 
   function getMoveName(argMoveId) {
@@ -44,11 +44,11 @@ function buttonClicked(buttonName) {
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   }
     
-    playerMove = buttonName;
+    const playerMove = buttonName;
     console.log('ruch gracza to: ' + playerMove);
     const randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
-    computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
     displayResult(playerMove, computerMove);
   }
