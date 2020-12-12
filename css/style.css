@@ -34,6 +34,11 @@ body {
 }
 
 .answer {
+  font-size: 40px;
   margin: 20px 0;
+}
+
+.result {
+  font-size: 40px;
 }
 /*# sourceMappingURL=style.css.map */
