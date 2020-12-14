@@ -1,3 +1,5 @@
+/* eslint-disable no-redeclare */
+/*exported printMessage clearMessages*/
 function printMessage(msg){
   var div = document.createElement('div');
   div.innerHTML = msg;
